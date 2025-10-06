@@ -1,0 +1,34 @@
+# Android Studio
+*.iml
+.idea/
+.gradle/
+build/
+local.properties
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+*.swp
+*.swo
+
+# Gradle
+gradle.properties
+gradlew
+gradlew.bat
+
+# Keystore
+*.jks
+*.keystore
+
+# Google Services
+google-services.json
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp

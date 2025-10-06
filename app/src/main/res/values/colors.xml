@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- DailyDose App Colors - Attractive Sample UI -->
+    <color name="background_color">#FFF5F7FA</color>
+    <color name="primary_color">#FF6C5CE7</color>
+    <color name="primary_dark">#FF5A4FCF</color>
+    <color name="accent_color">#FFFF6B6B</color>
+    <color name="secondary_color">#FF4ECDC4</color>
+    <color name="tertiary_color">#FF45B7D1</color>
+    <color name="success_color">#4CAF50</color>
+    <color name="error_color">#F44336</color>
+    <color name="success_color_dark">#388E3C</color>
+    <color name="divider_color">#CCCCCC</color>
+    <color name="primary_color_light">#FFAB91</color>
+    <color name="habit_card_bg">#F5F5F5</color>
+
+
+    <!-- Gradient Colors -->
+    <color name="gradient_start_pink">#FFFF6B6B</color>
+    <color name="gradient_end_purple">#FF6C5CE7</color>
+    <color name="gradient_start_blue">#FF4ECDC4</color>
+    <color name="gradient_end_teal">#FF45B7D1</color>
+    <color name="gradient_start_orange">#FFFF8A65</color>
+    <color name="gradient_end_red">#FFFF5722</color>
+    <color name="dark_gray">#666666</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#FF212121</color>
+    <color name="text_secondary">#FF757575</color>
+    <color name="gray">#525050</color>
+    <color name="text_hint">#FFBDBDBD</color>
+
+    <!-- Card Colors -->
+    <color name="card_background">#FFFFFFFF</color>
+    <color name="card_shadow">#1A000000</color>
+
+    <!-- Bottom Navigation -->
+    <color name="bottom_nav_background">#FFFFFFFF</color>
+    <color name="bottom_nav_item_selected">#FF4CAF50</color>
+    <color name="bottom_nav_item_unselected">#FF757575</color>
+
+    <!-- Modern Bottom Navigation -->
+    <color name="bottom_nav_background_modern">#FF1A1A1A</color>
+    <color name="bottom_nav_item_selected_modern">#FFFFFFFF</color>
+    <color name="bottom_nav_item_unselected_modern">#FF757575</color>
+
+    <!-- Habit Categories - Attractive Colors -->
+    <color name="habit_health">#FF4ECDC4</color>
+    <color name="habit_fitness">#FFFF6B6B</color>
+    <color name="habit_mind">#FF6C5CE7</color>
+    <color name="habit_work">#FF45B7D1</color>
+    <color name="habit_personal">#FFFF8A65</color>
+    <color name="habit_other">#FFA8E6CF</color>
+
+    <!-- Mood Colors -->
+    <color name="mood_very_happy">#FFFFEB3B</color>
+    <color name="mood_happy">#FFFF9800</color>
+    <color name="mood_neutral">#FF9E9E9E</color>
+    <color name="mood_sad">#FF2196F3</color>
+    <color name="mood_very_sad">#FF3F51B5</color>
+    <color name="mood_anxious">#FFFF5722</color>
+    <color name="mood_excited">#FFE91E63</color>
+    <color name="mood_tired">#FF795548</color>
+    <color name="mood_frustrated">#FFF44336</color>
+    <color name="mood_peaceful">#FF4CAF50</color>
+
+
+    <color name="teal_700">#018786</color>
+</resources>
