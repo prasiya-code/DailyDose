@@ -1,5 +1,8 @@
 package com.example.dailydose.fragments
 
+// DailyDose - Wellness & Habit Tracking App
+// A comprehensive Android application for personal wellness management
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
