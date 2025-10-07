@@ -28,8 +28,15 @@ class MainActivity : AppCompatActivity() {
         // Schedule hydration reminders on app start
         scheduleHydrationReminders()
 
+        // Schedule mood reminders on app start
+        scheduleMoodReminders()
+
+        // Handle notification tap
+        val openFragment = intent.getStringExtra("open_fragment")
+        val initialFragment = if (openFragment == "mood") MoodJournalFragment() else HabitTrackerFragment()
+
         // Default fragment
-        replaceFragment(HabitTrackerFragment())
+        replaceFragment(initialFragment)
 
         // Bottom navigation
         binding.bottomNavigation.setOnItemSelectedListener { item ->
@@ -54,6 +61,15 @@ class MainActivity : AppCompatActivity() {
             )
         } else {
             notificationHelper.cancelHydrationReminders()
+        }
+    }
+
+    fun scheduleMoodReminders() {
+        val settings = sharedPreferencesHelper.getSettings()
+        if (settings.moodReminderEnabled) {
+            notificationHelper.scheduleMoodReminders(settings.moodReminderTime)
+        } else {
+            notificationHelper.cancelMoodReminders()
         }
     }
 

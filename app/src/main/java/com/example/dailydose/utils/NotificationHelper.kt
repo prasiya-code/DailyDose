@@ -6,6 +6,7 @@ import android.content.Context
 import android.os.Build
 import androidx.work.*
 import com.example.dailydose.workers.HydrationReminderWorker
+import com.example.dailydose.workers.MoodReminderWorker
 import java.util.concurrent.TimeUnit
 
 class NotificationHelper(private val context: Context) {
@@ -45,6 +46,41 @@ class NotificationHelper(private val context: Context) {
     
     fun cancelHydrationReminders() {
         workManager.cancelUniqueWork("hydration_reminder")
+    }
+    
+    fun scheduleMoodReminders(time: String) {
+        // Cancel existing work
+        workManager.cancelUniqueWork("mood_reminder")
+        
+        // Parse start time (format: "HH:MM")
+        val timeParts = time.split(":")
+        val hour = timeParts[0].toInt()
+        val minute = timeParts[1].toInt()
+        
+        // Create constraints
+        val constraints = Constraints.Builder()
+            .setRequiredNetworkType(NetworkType.NOT_REQUIRED)
+            .setRequiresBatteryNotLow(true)
+            .build()
+        
+        // Create periodic work request (daily)
+        val moodWork = PeriodicWorkRequestBuilder<MoodReminderWorker>(
+            24, TimeUnit.HOURS // every 24 hours
+        )
+            .setConstraints(constraints)
+            .setInitialDelay(calculateInitialDelay(hour, minute), TimeUnit.MINUTES)
+            .build()
+        
+        // Enqueue the work
+        workManager.enqueueUniquePeriodicWork(
+            "mood_reminder",
+            ExistingPeriodicWorkPolicy.REPLACE,
+            moodWork
+        )
+    }
+    
+    fun cancelMoodReminders() {
+        workManager.cancelUniqueWork("mood_reminder")
     }
     
     private fun calculateInitialDelay(targetHour: Int, targetMinute: Int): Long {

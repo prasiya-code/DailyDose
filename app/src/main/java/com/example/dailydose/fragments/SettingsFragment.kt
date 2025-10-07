@@ -25,6 +25,8 @@ class SettingsFragment : Fragment() {
     private lateinit var waterIntakeInput: TextInputEditText
     private lateinit var reminderIntervalInput: TextInputEditText
     private lateinit var reminderTimeInput: TextInputEditText
+    private lateinit var moodReminderSwitch: SwitchMaterial
+    private lateinit var moodReminderTimeInput: TextInputEditText
 
     private val calendar = Calendar.getInstance()
     
@@ -52,6 +54,8 @@ class SettingsFragment : Fragment() {
         waterIntakeInput = view.findViewById(R.id.water_intake_input)
         reminderIntervalInput = view.findViewById(R.id.reminder_interval_input)
         reminderTimeInput = view.findViewById(R.id.reminder_time_input)
+        moodReminderSwitch = view.findViewById(R.id.mood_reminder_switch)
+        moodReminderTimeInput = view.findViewById(R.id.mood_reminder_time_input)
     }
 
     private fun loadSettings() {
@@ -61,11 +65,14 @@ class SettingsFragment : Fragment() {
         waterIntakeInput.setText(settings.dailyGoalWaterIntake.toString())
         reminderIntervalInput.setText(settings.hydrationReminderInterval.toString())
         updateReminderTimeText(settings.reminderTime)
+        moodReminderSwitch.isChecked = settings.moodReminderEnabled
+        updateMoodReminderTimeText(settings.moodReminderTime)
     }
 
     private fun setupListeners() {
         hydrationReminderSwitch.setOnCheckedChangeListener { _, _ -> saveSettings() }
         notificationsSwitch.setOnCheckedChangeListener { _, _ -> saveSettings() }
+        moodReminderSwitch.setOnCheckedChangeListener { _, _ -> saveSettings() }
 
         waterIntakeInput.setOnFocusChangeListener { _, hasFocus ->
             if (!hasFocus) validateAndSaveWaterIntake()
@@ -77,6 +84,10 @@ class SettingsFragment : Fragment() {
 
         reminderTimeInput.setOnClickListener {
             showTimePickerDialog()
+        }
+
+        moodReminderTimeInput.setOnClickListener {
+            showMoodTimePickerDialog()
         }
     }
 
@@ -97,6 +108,21 @@ class SettingsFragment : Fragment() {
         TimePickerDialog(requireContext(), timeSetListener, hour, minute, true).show()
     }
 
+    private fun showMoodTimePickerDialog() {
+        val timeSetListener = TimePickerDialog.OnTimeSetListener { _, hourOfDay, minute ->
+            val newTime = String.format(Locale.getDefault(), "%02d:%02d", hourOfDay, minute)
+            updateMoodReminderTimeText(newTime)
+            saveSettings()
+        }
+
+        val currentTime = moodReminderTimeInput.text.toString()
+        val parts = currentTime.split(":")
+        val hour = if (parts.size == 2) parts[0].toIntOrNull() ?: calendar.get(Calendar.HOUR_OF_DAY) else calendar.get(Calendar.HOUR_OF_DAY)
+        val minute = if (parts.size == 2) parts[1].toIntOrNull() ?: calendar.get(Calendar.MINUTE) else calendar.get(Calendar.MINUTE)
+
+        TimePickerDialog(requireContext(), timeSetListener, hour, minute, true).show()
+    }
+
     private fun updateReminderTimeText(time: String) {
         reminderTimeInput.setText(time)
         val parts = time.split(":")
@@ -104,6 +130,10 @@ class SettingsFragment : Fragment() {
             calendar.set(Calendar.HOUR_OF_DAY, parts[0].toInt())
             calendar.set(Calendar.MINUTE, parts[1].toInt())
         }
+    }
+
+    private fun updateMoodReminderTimeText(time: String) {
+        moodReminderTimeInput.setText(time)
     }
 
     private fun validateAndSaveWaterIntake() {
@@ -134,13 +164,18 @@ class SettingsFragment : Fragment() {
             notificationsEnabled = notificationsSwitch.isChecked,
             dailyGoalWaterIntake = waterIntakeInput.text.toString().toIntOrNull() ?: currentSettings.dailyGoalWaterIntake,
             hydrationReminderInterval = reminderIntervalInput.text.toString().toIntOrNull() ?: currentSettings.hydrationReminderInterval,
-            reminderTime = reminderTimeInput.text.toString().ifEmpty { currentSettings.reminderTime }
+            reminderTime = reminderTimeInput.text.toString().ifEmpty { currentSettings.reminderTime },
+            moodReminderEnabled = moodReminderSwitch.isChecked,
+            moodReminderTime = moodReminderTimeInput.text.toString().ifEmpty { currentSettings.moodReminderTime }
         )
 
         sharedPreferencesHelper.saveSettings(newSettings)
 
         // Reschedule hydration reminders with updated settings
         (activity as MainActivity).scheduleHydrationReminders()
+
+        // Reschedule mood reminders with updated settings
+        (activity as MainActivity).scheduleMoodReminders()
 
         Toast.makeText(context, "Settings saved", Toast.LENGTH_SHORT).show()
     }

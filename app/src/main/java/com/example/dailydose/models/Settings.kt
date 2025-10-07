@@ -27,6 +27,9 @@ data class Settings(
     @SerializedName("weekStartDay")
     val weekStartDay: Int = 1, // 1 = Monday, 0 = Sunday
     
-    @SerializedName("language")
-    val language: String = "en"
+    @SerializedName("moodReminderEnabled")
+    val moodReminderEnabled: Boolean = true,
+    
+    @SerializedName("moodReminderTime")
+    val moodReminderTime: String = "20:00", // 24-hour format, evening reminder
 )
