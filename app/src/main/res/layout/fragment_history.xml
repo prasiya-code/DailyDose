@@ -13,7 +13,7 @@
         android:id="@+id/header_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Habit History"
+android:text="@string/habit_history_title"
         android:textSize="28sp"
         android:textStyle="bold"
         android:textColor="@color/text_primary"
@@ -26,7 +26,7 @@
         android:id="@+id/header_subtitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Track your progress over the last 3 days"
+android:text="@string/habit_history_subtitle"
         android:textSize="16sp"
         android:textColor="@color/text_secondary"
         android:layout_marginBottom="24dp"
@@ -70,7 +70,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No history yet"
+android:text="@string/no_history_yet"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/text_primary"
@@ -79,7 +79,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Complete some habits to see your progress history"
+android:text="@string/no_history_description"
             android:textSize="14sp"
             android:textColor="@color/text_secondary"
             android:gravity="center" />

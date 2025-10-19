@@ -32,7 +32,7 @@
                     android:id="@+id/textHabitName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Habit Name"
+android:text="@string/habit_name"
                     android:textStyle="bold"
                     android:textSize="18sp"
                     android:textColor="@color/text_primary"
@@ -42,7 +42,7 @@
                     android:id="@+id/textHabitCategory"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="🏥 Health"
+android:text="@string/health_category"
                     android:textSize="14sp"
                     android:textColor="@color/text_secondary" />
 
@@ -53,7 +53,7 @@
                 android:id="@+id/buttonDelete"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:text="🗑"
+android:text="@string/delete_icon"
                 android:textSize="16sp"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -70,7 +70,7 @@
             android:id="@+id/textHabitDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Description here"
+android:text="@string/description_placeholder"
             android:textColor="@color/text_secondary"
             android:textSize="14sp"
             android:layout_marginBottom="12dp" />
@@ -93,7 +93,7 @@
                     android:id="@+id/textHabitTarget"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Target: 1/day"
+android:text="@string/target_label"
                     android:textSize="12sp"
                     android:textColor="@color/text_secondary"
                     android:layout_marginBottom="4dp" />
@@ -102,7 +102,7 @@
                     android:id="@+id/textHabitProgress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Progress: 0/1"
+android:text="@string/progress_label"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:textColor="@color/primary_color" />
@@ -114,7 +114,7 @@
                 android:id="@+id/buttonComplete"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
-                android:text="COMPLETE"
+android:text="@string/complete_button"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 android:letterSpacing="0.05"

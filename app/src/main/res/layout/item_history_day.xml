@@ -30,7 +30,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Monday, Dec 15"
+android:text="@string/sample_day"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/text_primary" />
@@ -39,7 +39,7 @@
                 android:id="@+id/history_progress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3/5 habits completed"
+android:text="@string/habits_completed"
                 android:textSize="14sp"
                 android:textColor="@color/text_secondary" />
 

@@ -33,7 +33,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CREATE NEW HABIT"
+android:text="@string/create_new_habit"
                     android:textSize="28sp"
                     android:textStyle="bold"
                     android:textColor="@color/white"
@@ -43,7 +43,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Build your routine, one step at a time"
+android:text="@string/build_routine"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:textColor="@color/white"
@@ -71,7 +71,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="HABIT NAME"
+android:text="@string/habit_name_label"
                         android:textSize="14sp"
                         android:textStyle="bold"
                         android:textColor="@color/white"
@@ -81,7 +81,7 @@
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Enter your habit"
+android:hint="@string/enter_habit_hint"
                         app:boxBackgroundMode="filled"
                         app:boxBackgroundColor="@color/white"
                         app:boxStrokeColor="@color/white"
@@ -124,7 +124,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="DESCRIPTION"
+android:text="@string/description"
                         android:textSize="14sp"
                         android:textStyle="bold"
                         android:textColor="@color/white"
@@ -134,7 +134,7 @@
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="What's your goal? (optional)"
+android:hint="@string/goal_hint"
                         app:boxBackgroundMode="filled"
                         app:boxBackgroundColor="@color/white"
                         app:boxStrokeColor="@color/white"
@@ -185,7 +185,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="DAILY TARGET"
+android:text="@string/daily_target"
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="@color/white"
@@ -195,13 +195,13 @@
                         <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Times per day"
+android:hint="@string/times_per_day_hint"
                             app:boxBackgroundMode="filled"
                             app:boxBackgroundColor="@color/white"
                             app:boxStrokeColor="@color/white"
                             app:hintTextColor="@color/text_secondary"
-                            app:prefixText="×"
-                            app:suffixText="/day"
+app:prefixText="@string/prefix_x"
+app:suffixText="@string/suffix_day"
                             app:boxCornerRadiusTopStart="12dp"
                             app:boxCornerRadiusTopEnd="12dp"
                             app:boxCornerRadiusBottomStart="12dp"
@@ -214,7 +214,7 @@
                                 android:inputType="number"
                                 android:textColor="@color/text_primary"
                                 android:textSize="18sp"
-                                android:text="1"
+android:text="@string/default_target"
                                 android:textStyle="bold"
                                 android:gravity="center" />
                         </com.google.android.material.textfield.TextInputLayout>
@@ -230,7 +230,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="CATEGORY"
+android:text="@string/category"
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="@color/white"
@@ -263,7 +263,7 @@
                     android:layout_width="0dp"
                     android:layout_height="60dp"
                     android:layout_weight="1"
-                    android:text="CANCEL"
+android:text="@string/cancel"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:letterSpacing="0.05"
@@ -279,7 +279,7 @@
                     android:layout_width="0dp"
                     android:layout_height="60dp"
                     android:layout_weight="1"
-                    android:text="CREATE HABIT"
+android:text="@string/create_habit"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:letterSpacing="0.05"

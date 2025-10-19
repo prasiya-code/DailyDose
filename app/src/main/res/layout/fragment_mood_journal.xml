@@ -13,7 +13,7 @@
         android:id="@+id/header_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Mood Journal"
+android:text="@string/mood_journal_title"
         android:textSize="28sp"
         android:textStyle="bold"
         android:textColor="@color/text_primary"
@@ -26,7 +26,7 @@
         android:id="@+id/header_subtitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Track your daily mood and emotions"
+android:text="@string/mood_journal_subtitle"
         android:textSize="16sp"
         android:textColor="@color/text_secondary"
         android:layout_marginBottom="24dp"
@@ -82,7 +82,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No mood entries yet"
+android:text="@string/no_mood_entries"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/text_primary"
@@ -91,7 +91,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add your first mood entry to get started"
+android:text="@string/add_first_mood"
             android:textSize="14sp"
             android:textColor="@color/text_secondary"
             android:gravity="center" />

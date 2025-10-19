@@ -24,7 +24,7 @@
             android:id="@+id/history_habit_emoji"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="🏥"
+            android:text="@string/category_icon"
             android:textSize="20sp"
             android:layout_marginEnd="12dp" />
 
@@ -39,7 +39,7 @@
                 android:id="@+id/history_habit_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Morning Jog"
+                android:text="@string/sample_habit_name"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="@color/text_primary"
@@ -55,7 +55,7 @@
                     android:id="@+id/history_habit_status"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Completed"
+                    android:text="@string/completed_label"
                     android:textSize="14sp"
                     android:textColor="@color/success_color"
                     android:layout_marginEnd="8dp" />
@@ -64,7 +64,7 @@
                     android:id="@+id/history_habit_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="at 08:30"
+                    android:text="@string/at_time"
                     android:textSize="12sp"
                     android:textColor="@color/text_secondary"
                     android:visibility="visible" />

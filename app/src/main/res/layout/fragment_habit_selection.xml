@@ -31,7 +31,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Create "
+android:text="@string/create_button"
                     android:textSize="28sp"
                     android:textStyle="bold"
                     android:textColor="@color/text_primary" />
@@ -39,7 +39,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Habits"
+android:text="@string/habits_title"
                     android:textSize="28sp"
                     android:textStyle="bold"
                     android:textColor="@color/accent_color" />
@@ -50,7 +50,7 @@
                 android:id="@+id/create_custom_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Create +"
+android:text="@string/create_plus"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/text_primary"
                 app:cornerRadius="20dp"
@@ -62,7 +62,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Create Your Custom Habit"
+android:text="@string/create_custom_habit"
             android:textSize="16sp"
             android:textColor="@color/text_secondary"
             android:layout_marginBottom="32dp" />
@@ -83,7 +83,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Or create your own"
+android:text="@string/or_create_own"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/text_primary"
@@ -108,14 +108,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="➕"
+android:text="@string/plus_icon"
                     android:textSize="48sp"
                     android:layout_marginBottom="16dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Custom Habit"
+android:text="@string/custom_habit"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="@color/text_primary"
@@ -124,7 +124,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Create your own personalized habit"
+android:text="@string/create_personalized_habit"
                     android:textSize="14sp"
                     android:textColor="@color/text_secondary"
                     android:gravity="center" />

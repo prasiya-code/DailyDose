@@ -29,7 +29,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="⚙️ Settings"
+android:text="@string/settings_title"
                 android:textSize="32sp"
                 android:textStyle="bold"
                 android:textColor="@color/text_primary"
@@ -40,7 +40,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Personalize your wellness journey"
+android:text="@string/settings_subtitle"
             android:textSize="16sp"
             android:textColor="@color/text_secondary"
             android:layout_marginBottom="24dp"
@@ -72,7 +72,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="💧 Hydration Reminders"
+android:text="@string/hydration_reminders_title"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         android:textColor="@color/text_primary"
@@ -81,7 +81,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Stay hydrated throughout the day"
+android:text="@string/hydration_reminders_subtitle"
                         android:textSize="14sp"
                         android:textColor="@color/text_secondary"
                         android:alpha="0.7" />
@@ -107,7 +107,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Enable Reminders"
+android:text="@string/enable_reminders"
                             android:textSize="16sp"
                             android:textStyle="bold"
                             android:textColor="@color/text_primary" />
@@ -115,7 +115,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Get regular water intake reminders"
+android:text="@string/hydration_reminders_description"
                             android:textSize="13sp"
                             android:textColor="@color/text_secondary"
                             android:layout_marginTop="2dp"
@@ -146,14 +146,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:hint="Daily water goal"
+                    android:hint="@string/daily_water_goal_hint"
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                     app:boxStrokeColor="@color/primary_color"
                     app:hintTextColor="@color/primary_color"
-                    app:helperText="Recommended: 8 glasses"
+                    app:helperText="@string/recommended_glasses"
                     app:helperTextTextColor="@color/text_secondary"
-                    app:prefixText="🥤 "
-                    app:suffixText=" glasses"
+                    app:prefixText="@string/water_glass_prefix"
+                    app:suffixText="@string/glasses_suffix"
                     app:boxCornerRadiusTopStart="12dp"
                     app:boxCornerRadiusTopEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
@@ -165,7 +165,7 @@
                         android:layout_height="wrap_content"
                         android:inputType="number"
                         android:maxLength="2"
-                        android:text="8"
+                        android:text="@string/default_water_intake"
                         android:textSize="16sp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -175,14 +175,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:hint="Reminder frequency"
+                    android:hint="@string/reminder_frequency_hint"
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                     app:boxStrokeColor="@color/primary_color"
                     app:hintTextColor="@color/primary_color"
-                    app:helperText="How often to remind you"
+                    app:helperText="@string/reminder_frequency_helper"
                     app:helperTextTextColor="@color/text_secondary"
-                    app:prefixText="⏰ Every "
-                    app:suffixText=" hours"
+                    app:prefixText="@string/every_prefix"
+                    app:suffixText="@string/hours_suffix"
                     app:boxCornerRadiusTopStart="12dp"
                     app:boxCornerRadiusTopEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
@@ -194,7 +194,7 @@
                         android:layout_height="wrap_content"
                         android:inputType="number"
                         android:maxLength="2"
-                        android:text="2"
+                        android:text="@string/default_reminder_interval"
                         android:textSize="16sp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -203,13 +203,13 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Start time"
+                    android:hint="@string/start_time_hint"
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                     app:boxStrokeColor="@color/primary_color"
                     app:hintTextColor="@color/primary_color"
-                    app:helperText="First reminder of the day"
+                    app:helperText="@string/start_time_helper"
                     app:helperTextTextColor="@color/text_secondary"
-                    app:prefixText="🕐 "
+                    app:prefixText="@string/time_prefix"
                     app:boxCornerRadiusTopStart="12dp"
                     app:boxCornerRadiusTopEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
@@ -225,7 +225,7 @@
                         android:inputType="none"
                         android:focusable="false"
                         android:clickable="true"
-                        android:text="09:00"
+                        android:text="@string/default_start_time"
                         android:textSize="16sp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -260,7 +260,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="🌙 Mood Reminders"
+                        android:text="@string/mood_reminders_title"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         android:textColor="@color/text_primary"
@@ -269,7 +269,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Reflect on your daily emotions"
+                        android:text="@string/mood_reminders_subtitle"
                         android:textSize="14sp"
                         android:textColor="@color/text_secondary"
                         android:alpha="0.7" />
@@ -295,7 +295,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Enable Reminders"
+                            android:text="@string/enable_reminders"
                             android:textSize="16sp"
                             android:textStyle="bold"
                             android:textColor="@color/text_primary" />
@@ -303,7 +303,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Daily reminder to log your mood"
+                            android:text="@string/mood_reminders_description"
                             android:textSize="13sp"
                             android:textColor="@color/text_secondary"
                             android:layout_marginTop="2dp"
@@ -333,13 +333,13 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Reminder time"
+                    android:hint="@string/reminder_time_hint"
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                     app:boxStrokeColor="@color/primary_color"
                     app:hintTextColor="@color/primary_color"
-                    app:helperText="When to remind you daily"
+                    app:helperText="@string/mood_reminder_time_helper"
                     app:helperTextTextColor="@color/text_secondary"
-                    app:prefixText="🕐 "
+                    app:prefixText="@string/time_prefix"
                     app:boxCornerRadiusTopStart="12dp"
                     app:boxCornerRadiusTopEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
@@ -355,7 +355,7 @@
                         android:inputType="none"
                         android:focusable="false"
                         android:clickable="true"
-                        android:text="20:00"
+                        android:text="@string/default_mood_time"
                         android:textSize="16sp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -390,7 +390,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="🔔 Notifications"
+                        android:text="@string/notifications_title"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         android:textColor="@color/text_primary"
@@ -399,7 +399,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Manage your notification preferences"
+                        android:text="@string/notifications_subtitle"
                         android:textSize="14sp"
                         android:textColor="@color/text_secondary"
                         android:alpha="0.7" />
@@ -424,7 +424,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Push Notifications"
+                            android:text="@string/push_notifications"
                             android:textSize="16sp"
                             android:textStyle="bold"
                             android:textColor="@color/text_primary" />
@@ -432,7 +432,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Receive alerts for habits and reminders"
+android:text="@string/push_notifications_description"
                             android:textSize="13sp"
                             android:textColor="@color/text_secondary"
                             android:layout_marginTop="2dp"
@@ -480,7 +480,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="ℹ️ App Information"
+android:text="@string/app_info_title"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         android:textColor="@color/text_primary"
@@ -489,7 +489,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Learn more about DailyDose"
+android:text="@string/app_info_subtitle"
                         android:textSize="14sp"
                         android:textColor="@color/text_secondary"
                         android:alpha="0.7" />
@@ -509,14 +509,14 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Version"
+android:text="@string/version_label"
                         android:textSize="15sp"
                         android:textColor="@color/text_secondary" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1.0.0"
+android:text="@string/app_version"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:textColor="@color/text_primary" />
@@ -535,7 +535,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Your personal wellness companion for building healthy habits and staying on track with your daily goals."
+android:text="@string/app_description"
                     android:textSize="14sp"
                     android:textColor="@color/text_secondary"
                     android:lineSpacingExtra="4dp"
